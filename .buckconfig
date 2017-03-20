@@ -1,0 +1,7 @@
+[cache]
+  mode = http
+  http_url = http://localhost:6457
+  http_mode = readwrite
+
+[httpserver]
+  port = 0

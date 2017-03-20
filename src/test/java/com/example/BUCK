@@ -1,0 +1,11 @@
+java_test(
+  name = "test",
+  srcs = [
+    'HelloTest.java'
+  ],
+  deps = [
+    '//src/main/java/com/example:hellol',
+    '//libs:junit',
+    '//libs:hamcrest',
+    ],
+)

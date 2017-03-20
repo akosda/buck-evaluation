@@ -1,0 +1,18 @@
+java_library(
+    name = "hellol",
+    srcs = glob(["*.java"]),
+    visibility = ['//src/test/java/com/example:test']
+)
+
+java_binary(
+  name = "hellob",
+  deps = [":hellol"],
+  main_class = "com.example.Hello"
+)
+
+genrule(
+  name = "cmd",
+  srcs = ["Hello.java"],
+  out = 'date.txt',
+  cmd = 'pwd > $OUT && ls -la >> $OUT'
+)
